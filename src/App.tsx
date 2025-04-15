@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
 import Layout from "@/components/layout";
 import PageTransition from "@/components/page-transition";
@@ -28,20 +28,18 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
-            <Layout>
-              <PageTransition>
-                <Routes>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/skills" element={<Skills />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </PageTransition>
-            </Layout>
-          </BrowserRouter>
+          <Layout>
+            <PageTransition>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </PageTransition>
+          </Layout>
         </TooltipProvider>
       </MotionConfig>
     </ThemeProvider>
