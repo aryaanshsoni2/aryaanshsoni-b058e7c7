@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import PageContainer from "@/components/page-container";
 import ProjectCard, { ProjectProps } from "@/components/project-card";
@@ -7,6 +6,14 @@ import { Button } from "@/components/ui/button";
 
 // Sample project data
 const projectsData: ProjectProps[] = [
+  {
+    id: 0,
+    title: "WHIZ KID 2024-25",
+    description: "Proud recipient of the Tech Whiz Award for outstanding innovation and excellence in technology.",
+    image: "/lovable-uploads/324ec7b6-cd9d-4470-b75c-8eefde3eb66b.png",
+    tags: ["Awards"],
+    // No URLs for award
+  },
   {
     id: 1,
     title: "AI Image Generator",
@@ -81,9 +88,9 @@ const Projects = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold font-cyber mb-4">My Projects</h1>
+        <h1 className="text-4xl font-bold font-cyber mb-4">Awards and Projects</h1>
         <p className="text-foreground/80 max-w-2xl mx-auto">
-          Here are some of the projects I've worked on. Each project represents a unique challenge and learning experience.
+          Here are some of my awards and projects. Each represents a milestone in my journey.
         </p>
       </motion.div>
       
