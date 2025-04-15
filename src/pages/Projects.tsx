@@ -19,7 +19,7 @@ const projectsData: ProjectProps[] = [
     description: "Secured 1st Prize in the Heritage of Chennai Contest 2023 for our presentation on \"Two Old Houses of Chennai,\" held at the historic Ranade Library. Grateful to Mylapore Times for this enriching experience that deepened our connection with Chennai's rich heritage.",
     image: "/lovable-uploads/a04de478-02e1-4e89-bf9e-a6f99a0c1ca2.png",
     tags: ["Awards", "Graphic Design"],
-    liveUrl: "https://lnkd.in/exZ7naYC"
+    liveUrl: "https://www.mylaporetimes.com/2023/08/madras-day-2023-12-schools-present-their-study-of-old-houses-of-the-city-at-event-held-at-ranade-library/"
   },
   {
     id: 2,
@@ -31,57 +31,27 @@ const projectsData: ProjectProps[] = [
   },
   {
     id: 3,
-    title: "AI Image Generator",
-    description: "A web application that uses AI to generate images from text descriptions.",
-    image: "/lovable-uploads/664c70b6-cba6-4420-bf44-0b60241910a2.png",
+    title: "DEEPIKA 2022",
+    description: "Core editing team of annual school magazine 2022",
+    image: "/lovable-uploads/1661c575-06fb-438a-aaf8-1623c008d036.png",
     tags: ["Graphic Design"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "https://bgpm.davchennai.org/static/pdf/Deepika2022.pdf"
   },
   {
     id: 4,
-    title: "Personal Finance Tracker",
-    description: "A finance application to track expenses, income, and savings with visualizations.",
-    image: "/lovable-uploads/38b79f5b-bbd7-498b-badc-18b084f86d4a.png",
-    tags: ["Vue.js", "Firebase", "Chart.js"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    title: "DEEPIKA 2023",
+    description: "Core editing team of annual school magazine 2023",
+    image: "/lovable-uploads/58ee6266-ad22-426f-bc93-0704f60815ef.png",
+    tags: ["Graphic Design"],
+    liveUrl: "https://bgpm.davchennai.org/static/pdf/Deepika2023.pdf"
   },
   {
     id: 5,
-    title: "Smart Learning Platform",
-    description: "An education platform with personalized learning paths and progress tracking.",
-    image: "/lovable-uploads/5d86cabe-e89f-4027-b39d-24df11b83fd2.png",
-    tags: ["React", "MongoDB", "Express"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
-  {
-    id: 6,
-    title: "E-commerce Website",
-    description: "A full-featured online store with product listings, cart, and checkout functionality.",
-    image: "/lovable-uploads/01ee266b-657d-4c1e-bc7b-6400ddd3ebd1.png",
-    tags: ["Next.js", "Stripe", "Postgres"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
-  {
-    id: 7,
-    title: "Community Forum",
-    description: "A discussion platform for connecting users and sharing knowledge.",
-    image: "/lovable-uploads/54aa53cf-15e2-4bdd-9bf0-a96329de67b6.png",
-    tags: ["React", "GraphQL", "Apollo"],
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 8,
-    title: "Task Management App",
-    description: "A productivity tool for managing tasks, projects, and deadlines.",
-    image: "/lovable-uploads/6ae1f132-8ad2-4360-9621-d5fcac08ffc7.png",
-    tags: ["Vue.js", "Vuex", "Firebase"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
+    title: "DEEPIKA 2024",
+    description: "Led technical team of annual school magazine 2024-25",
+    image: "/lovable-uploads/965626c9-034f-4ef1-a2f1-8fde6d916ec1.png",
+    tags: ["Graphic Design"]
+  }
 ];
 
 // Updated categories array
