@@ -62,8 +62,8 @@ const projectsData: ProjectProps[] = [
   },
 ];
 
-// Filter categories
-const categories = ["All", "React", "Vue.js", "Node.js", "Firebase", "MongoDB"];
+// Updated categories array
+const categories = ["All", "Graphic Design", "Awards", "Video Editing"];
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
