@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { lazy, Suspense } from "react";
 
 export interface ProjectProps {
   id: number;
@@ -21,6 +20,8 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const isAward = project.tags.includes("Awards");
+  const isCertificate = project.tags.includes("Certificates");
+  const isSpecial = isAward || isCertificate;
 
   return (
     <motion.div
@@ -28,14 +29,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={!isAward ? { y: -5, transition: { duration: 0.2 } } : {}}
+      whileHover={!isSpecial ? { y: -5, transition: { duration: 0.2 } } : {}}
     >
       <div className="relative h-56 overflow-hidden">
-        <div className={`absolute inset-0 ${isAward ? 'bg-black/10' : 'bg-black/30 group-hover:bg-black/10'} transition-all duration-300 z-10`} />
+        <div className={`absolute inset-0 ${isSpecial ? 'bg-black/10' : 'bg-black/30 group-hover:bg-black/10'} transition-all duration-300 z-10`} />
         <img 
           src={project.image} 
           alt={project.title} 
-          className={`w-full h-full object-cover ${!isAward ? 'transition-transform duration-500 group-hover:scale-110' : ''}`}
+          className={`w-full h-full object-cover ${!isSpecial ? 'transition-transform duration-500 group-hover:scale-110' : ''}`}
           loading="lazy"
         />
       </div>
@@ -52,7 +53,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
         
-        {!isAward && (
+        {!isAward && project.liveUrl && (
           <div className="flex gap-2">
             {project.githubUrl && (
               <Button variant="outline" size="sm" className="gap-1" asChild>
@@ -62,14 +63,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </a>
               </Button>
             )}
-            {project.liveUrl && (
-              <Button size="sm" className="gap-1" asChild>
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4 mr-1" />
-                  Live Demo
-                </a>
-              </Button>
-            )}
+            <Button size="sm" className="gap-1" asChild>
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="w-4 h-4 mr-1" />
+                {isCertificate ? 'View Certificate' : 'View Details'}
+              </a>
+            </Button>
           </div>
         )}
       </div>
