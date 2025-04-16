@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -18,60 +19,76 @@ interface ProjectCardProps {
   index: number;
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+const ProjectCard = ({ project, index }: ProjectCardProps) => {
   const isAward = project.tags.includes("Awards");
   const isCertificate = project.tags.includes("Certificates");
-  const isSpecial = isAward || isCertificate;
-
+  
   return (
     <motion.div
-      className="group relative flex flex-col overflow-hidden rounded-xl neon-border"
+      className="rounded-xl overflow-hidden h-full glass will-change-transform"
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={!isSpecial ? { y: -5, transition: { duration: 0.2 } } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      viewport={{ once: true, margin: "-100px" }}
     >
-      <div className="relative h-56 overflow-hidden">
-        <div className={`absolute inset-0 ${isSpecial ? 'bg-black/10' : 'bg-black/30 group-hover:bg-black/10'} transition-all duration-300 z-10`} />
-        <img 
-          src={project.image} 
-          alt={project.title} 
-          className={`w-full h-full object-cover ${!isSpecial ? 'transition-transform duration-500 group-hover:scale-110' : ''}`}
+      <div className="relative overflow-hidden h-48">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transform-gpu hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
       </div>
-
-      <div className="flex-1 flex flex-col p-6 bg-card glass">
-        <h3 className="text-xl font-bold mb-2 font-cyber">{project.title}</h3>
-        <p className="text-sm text-foreground/80 mb-4">{project.description}</p>
-        
-        <div className="flex flex-wrap gap-2 mb-4 mt-auto">
-          {project.tags.map(tag => (
-            <span key={tag} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">
+      
+      <div className="p-5">
+        <div className="flex flex-wrap gap-2 mb-3">
+          {project.tags.map((tag) => (
+            <Badge key={tag} variant="outline" className="bg-primary/10 text-xs">
               {tag}
-            </span>
+            </Badge>
           ))}
         </div>
         
-        {!isAward && project.liveUrl && (
-          <div className="flex gap-2">
+        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+        
+        <p className="text-foreground/80 text-sm mb-4 line-clamp-3">
+          {project.description}
+        </p>
+        
+        {(project.githubUrl || project.liveUrl) && !isAward && (
+          <div className="flex flex-wrap gap-2 mt-auto">
             {project.githubUrl && (
-              <Button variant="outline" size="sm" className="gap-1" asChild>
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                  <Github className="w-4 h-4 mr-1" />
-                  GitHub
+              <Button size="sm" variant="outline" asChild>
+                <a 
+                  href={project.githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>Code</span>
                 </a>
               </Button>
             )}
-            <Button size="sm" className="gap-1" asChild>
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-1" />
-                {isCertificate ? 'View Certificate' : 'View Details'}
-              </a>
-            </Button>
+            
+            {project.liveUrl && (
+              <Button size="sm" variant={isCertificate ? "default" : "outline"} asChild>
+                <a 
+                  href={project.liveUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>{isCertificate ? "View Certificate" : "Live Demo"}</span>
+                </a>
+              </Button>
+            )}
           </div>
         )}
       </div>
     </motion.div>
   );
-}
+};
+
+export default ProjectCard;

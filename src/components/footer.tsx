@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,9 +8,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
-            <Link to="/" className="text-xl font-bold font-cyber text-gradient">
+            <a href="#home" className="text-xl font-bold font-cyber text-gradient">
               Aryaansh<span className="text-foreground font-normal">.</span>
-            </Link>
+            </a>
             <p className="text-sm text-foreground/60 mt-1">
               © {new Date().getFullYear()} Aryaansh Soni. All rights reserved.
             </p>
@@ -28,7 +27,7 @@ export default function Footer() {
               <Github className="w-5 h-5" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/aryaansh-soni-864794217/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/80 hover:text-primary transition-colors"
@@ -37,16 +36,7 @@ export default function Footer() {
               <Linkedin className="w-5 h-5" />
             </motion.a>
             <motion.a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/80 hover:text-primary transition-colors"
-              whileHover={{ y: -3 }}
-            >
-              <Twitter className="w-5 h-5" />
-            </motion.a>
-            <motion.a
-              href="mailto:contact@example.com"
+              href="mailto:saryaansh@gmail.com"
               className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/80 hover:text-primary transition-colors"
               whileHover={{ y: -3 }}
             >

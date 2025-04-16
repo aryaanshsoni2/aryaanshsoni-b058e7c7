@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import PageContainer from "@/components/page-container";
 import { Badge } from "@/components/ui/badge";
-import { Award, Calendar, GraduationCap, Briefcase } from "lucide-react";
+import { Award, Briefcase, GraduationCap, Calendar, MapPin } from "lucide-react";
+import ExperienceTimeline from "@/components/experience-timeline";
 
 const About = () => {
   return (
@@ -20,6 +21,7 @@ const About = () => {
                 src="/lovable-uploads/4448e0e7-e1da-41b3-add9-17dcec9d9015.png"
                 alt="Aryaansh Soni"
                 className="w-full h-auto"
+                loading="lazy"
               />
             </div>
             
@@ -37,11 +39,19 @@ const About = () => {
             
             <div className="glass p-4 rounded-xl">
               <h3 className="text-sm font-semibold mb-3 text-foreground/70">Location</h3>
-              <p className="text-foreground mb-4">Chennai, Tamil Nadu, India</p>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-primary" />
+                <p className="text-foreground">Chennai, Tamil Nadu, India</p>
+              </div>
               
-              <h3 className="text-sm font-semibold mb-3 text-foreground/70">Education</h3>
-              <p className="text-foreground">DAV Group of Schools (TNAES), Chennai</p>
-              <p className="text-sm text-foreground/70">Computer Science • 2011 - 2025</p>
+              <h3 className="text-sm font-semibold mb-3 mt-4 text-foreground/70">Education</h3>
+              <div className="flex items-center gap-2">
+                <GraduationCap className="w-4 h-4 text-primary" />
+                <div>
+                  <p className="text-foreground">DAV Group of Schools (TNAES), Chennai</p>
+                  <p className="text-sm text-foreground/70">Computer Science • 2011 - 2025</p>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -75,76 +85,13 @@ const About = () => {
           
           <h2 className="text-2xl font-bold font-cyber mt-10 mb-6">Experience</h2>
           
-          <div className="space-y-8">
-            {/* Experience item 1 */}
-            <div className="glass p-6 rounded-xl relative">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Briefcase className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Computer Science Club Secretary</h3>
-                  <p className="text-foreground/70 mb-2">DAV Group of Schools (TNAES), Chennai</p>
-                  <div className="flex items-center gap-1 text-sm text-foreground/60 mb-4">
-                    <Calendar className="w-4 h-4" />
-                    <span>Mar 2022 - Present</span>
-                  </div>
-                  <p className="text-foreground/80">
-                    Led the Computer Science Club, organizing workshops and events to promote
-                    technical learning and innovation among students.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Experience item 2 */}
-            <div className="glass p-6 rounded-xl relative">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Chief Cultural Coordinator - jarvis'24</h3>
-                  <p className="text-foreground/70 mb-2">DAV Group of Schools (TNAES), Chennai</p>
-                  <div className="flex items-center gap-1 text-sm text-foreground/60 mb-4">
-                    <Calendar className="w-4 h-4" />
-                    <span>Aug 2024 - Dec 2024</span>
-                  </div>
-                  <p className="text-foreground/80">
-                    Coordinated cultural activities and events, managing teams and ensuring
-                    successful execution of programs.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Experience item 3 */}
-            <div className="glass p-6 rounded-xl relative">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Co-Founder</h3>
-                  <p className="text-foreground/70 mb-2">Trizz Global</p>
-                  <div className="flex items-center gap-1 text-sm text-foreground/60 mb-4">
-                    <Calendar className="w-4 h-4" />
-                    <span>Apr 2024 - Present</span>
-                  </div>
-                  <p className="text-foreground/80">
-                    Co-founded Trizz Global, focusing on innovative solutions and
-                    entrepreneurial initiatives.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ExperienceTimeline />
           
           <h2 className="text-2xl font-bold font-cyber mt-10 mb-6">Certifications</h2>
           
           <div className="space-y-4">
             <div className="glass p-4 rounded-xl flex items-center gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png" alt="Microsoft" className="w-10 h-10 object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png" alt="Microsoft" className="w-10 h-10 object-contain" loading="lazy" />
               <div>
                 <h3 className="font-semibold">Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
                 <p className="text-sm text-foreground/70">Issued Jan 2025</p>
@@ -152,7 +99,7 @@ const About = () => {
             </div>
             
             <div className="glass p-4 rounded-xl flex items-center gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png" alt="LinkedIn" className="w-10 h-10 object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png" alt="LinkedIn" className="w-10 h-10 object-contain" loading="lazy" />
               <div>
                 <h3 className="font-semibold">Ethics in the Age of Generative AI</h3>
                 <p className="text-sm text-foreground/70">Issued Jan 2025</p>
