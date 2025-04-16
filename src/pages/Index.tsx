@@ -4,40 +4,46 @@ import PageContainer from "@/components/page-container";
 import Hero from "@/components/hero";
 import { Button } from "@/components/ui/button";
 import { BrainCircuit, Code, User, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const features = [
   {
     icon: <Code className="w-6 h-6" />,
     title: "Projects",
     description: "Check out my latest work and coding projects.",
-    link: "/projects",
+    sectionId: "projects",
     color: "bg-neon-pink/10",
   },
   {
     icon: <BrainCircuit className="w-6 h-6" />,
     title: "Skills",
     description: "Learn about my technical and professional skills.",
-    link: "/skills",
+    sectionId: "skills",
     color: "bg-neon-blue/10",
   },
   {
     icon: <User className="w-6 h-6" />,
     title: "About Me",
     description: "Get to know me better and my professional journey.",
-    link: "/about",
+    sectionId: "about",
     color: "bg-neon-green/10",
   },
   {
     icon: <Mail className="w-6 h-6" />,
     title: "Contact",
     description: "Reach out to me for collaboration or inquiries.",
-    link: "/contact",
+    sectionId: "contact",
     color: "bg-neon-purple/10",
   },
 ];
 
 const Index = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Hero />
@@ -67,8 +73,12 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-2 font-cyber">{feature.title}</h3>
               <p className="text-foreground/80 mb-4">{feature.description}</p>
-              <Button asChild variant="outline" className="rounded-md">
-                <Link to={feature.link}>Explore {feature.title}</Link>
+              <Button 
+                variant="outline" 
+                className="rounded-md"
+                onClick={() => scrollToSection(feature.sectionId)}
+              >
+                Explore {feature.title}
               </Button>
             </motion.div>
           ))}

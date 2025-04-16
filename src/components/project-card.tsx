@@ -80,7 +80,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                   className="flex items-center gap-1"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span>{isCertificate ? "View Certificate" : "Live Demo"}</span>
+                  <span>{isCertificate ? "View Certificate" : "Read Me"}</span>
                 </a>
               </Button>
             )}

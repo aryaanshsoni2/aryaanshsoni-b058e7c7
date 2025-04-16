@@ -18,7 +18,7 @@ export default function Footer() {
           
           <div className="flex items-center gap-4">
             <motion.a
-              href="https://github.com"
+              href="https://github.com/AryaanshSoni"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/80 hover:text-primary transition-colors"

@@ -1,9 +1,17 @@
+
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-[90vh] flex flex-col items-center justify-center relative overflow-hidden">
       <motion.div
@@ -65,11 +73,18 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
-          <Button asChild className="rounded-full px-6 bg-primary hover:bg-primary/90 text-white">
-            <Link to="/projects">View My Projects</Link>
+          <Button
+            className="rounded-full px-6 bg-primary hover:bg-primary/90 text-white"
+            onClick={() => scrollToSection('projects')}
+          >
+            View My Projects
           </Button>
-          <Button asChild variant="outline" className="rounded-full px-6 border-primary/20 hover:bg-primary/5">
-            <Link to="/contact">Contact Me</Link>
+          <Button
+            variant="outline"
+            className="rounded-full px-6 border-primary/20 hover:bg-primary/5"
+            onClick={() => scrollToSection('contact')}
+          >
+            Contact Me
           </Button>
         </motion.div>
 
