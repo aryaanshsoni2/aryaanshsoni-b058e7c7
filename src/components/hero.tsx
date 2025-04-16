@@ -1,8 +1,6 @@
-
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -21,11 +19,11 @@ export default function Hero() {
         transition={{ duration: 1 }}
       >
         <img 
-          src="/lovable-uploads/93aebe5a-5361-45de-9254-c5f35a7c4ad4.png"
-          alt="Scenic background"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          src="/lovable-uploads/5f980dc8-8e00-4827-88c6-2c6c7ead86d6.png"
+          alt="Scenic sunset landscape"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-black/20" />
       </motion.div>
 
       <div className="text-center max-w-4xl px-4 space-y-8 relative z-10">
