@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,12 +12,15 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-blue-500/5" />
-        <div className="absolute top-20 left-20 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-64 h-64 bg-neon-blue/10 rounded-full blur-3xl" />
+        <img 
+          src="/lovable-uploads/93aebe5a-5361-45de-9254-c5f35a7c4ad4.png"
+          alt="Scenic background"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/40" />
       </motion.div>
 
-      <div className="text-center max-w-4xl px-4 space-y-8">
+      <div className="text-center max-w-4xl px-4 space-y-8 relative z-10">
         <motion.div
           className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/10 mx-auto relative"
           initial={{ y: 20, opacity: 0 }}
@@ -27,14 +29,14 @@ export default function Hero() {
         >
           <div className="absolute inset-0 animate-glow rounded-full" />
           <img 
-            src="/lovable-uploads/b085da64-58c0-40c2-9fe2-1646dd6158d4.png" 
+            src="/lovable-uploads/3b60924f-dd5c-45a4-9060-68caa7700a9d.png" 
             alt="Aryaansh Soni" 
             className="w-full h-full object-cover rounded-full"
           />
         </motion.div>
 
         <motion.h1
-          className="text-4xl md:text-6xl font-bold font-cyber animated-text"
+          className="text-4xl md:text-6xl font-bold font-cyber bg-gradient-to-r from-primary via-purple-500 to-pink-500 text-transparent bg-clip-text animated-text"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
@@ -70,16 +72,16 @@ export default function Hero() {
             <Link to="/contact">Contact Me</Link>
           </Button>
         </motion.div>
+
+        <motion.div
+          className="absolute bottom-10"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+        >
+          <ChevronDown className="w-8 h-8 text-foreground/50" />
+        </motion.div>
       </div>
-      
-      <motion.div
-        className="absolute bottom-10"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-      >
-        <ChevronDown className="w-8 h-8 text-foreground/50" />
-      </motion.div>
     </div>
   );
 }
