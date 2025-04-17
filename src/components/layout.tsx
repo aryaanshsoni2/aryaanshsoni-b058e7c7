@@ -43,7 +43,15 @@ export default function Layout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
+      <div className="fixed inset-0 -z-10">
+        <img 
+          src="/lovable-uploads/2c1ae677-ddc1-4a42-b9e7-5d197c7ceb59.png" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" /> {/* Global overlay for better contrast */}
+      </div>
       <Navbar />
       <ThemeToggle />
       <main className="flex-grow">
