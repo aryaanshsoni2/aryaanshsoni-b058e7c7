@@ -43,7 +43,7 @@ export default function Layout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen relative z-0">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <ThemeToggle />
       <main className="flex-grow">
