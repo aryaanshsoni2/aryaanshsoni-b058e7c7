@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,11 +19,11 @@ export default function Hero() {
         transition={{ duration: 1 }}
       >
         <img 
-          src="/lovable-uploads/f6986b22-af30-49c2-9296-ddc2cab41aa1.png"
-          alt="Scenic background"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
+          src="/lovable-uploads/5f980dc8-8e00-4827-88c6-2c6c7ead86d6.png"
+          alt="Scenic sunset landscape"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-black/20" />
       </motion.div>
 
       <div className="text-center max-w-4xl px-4 space-y-8 relative z-10">
@@ -36,7 +35,7 @@ export default function Hero() {
         >
           <div className="absolute inset-0 animate-glow rounded-full" />
           <img 
-            src="/lovable-uploads/d4b4a350-dd6d-406a-a7d5-e36626121c32.png" 
+            src="/lovable-uploads/3b60924f-dd5c-45a4-9060-68caa7700a9d.png" 
             alt="Aryaansh Soni" 
             className="w-full h-full object-cover rounded-full"
           />
