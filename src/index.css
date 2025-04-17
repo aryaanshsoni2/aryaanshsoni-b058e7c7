@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -58,11 +59,12 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     min-height: 100vh;
-    background-image: url('/lovable-uploads/0e0e9863-0fb1-4244-8506-46633391e39c.png');
+    background-image: url('/lovable-uploads/513f0cba-12d8-46a4-a475-1c8a715bad6d.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    z-index: 0;
   }
   
   body::before {
@@ -72,7 +74,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.75); /* Increased opacity for better visibility */
     z-index: -1;
   }
 }
