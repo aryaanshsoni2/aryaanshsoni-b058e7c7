@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,6 +57,9 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 }
 
@@ -89,9 +93,25 @@
   }
   
   .global-background {
-    background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     background-attachment: fixed;
     min-height: 100vh;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+    background: linear-gradient(90deg, #9333ea, #6366f1);
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.6;
   }
 }
 
