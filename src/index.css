@@ -54,28 +54,12 @@
   * {
     @apply border-border;
   }
-  
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    min-height: 100vh;
-    background-image: url('/lovable-uploads/513f0cba-12d8-46a4-a475-1c8a715bad6d.png');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     background-attachment: fixed;
-    position: relative;
-    z-index: 0;
-  }
-  
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75); /* Increased opacity for better visibility */
-    z-index: -1;
+    min-height: 100vh;
   }
 }
 
@@ -106,6 +90,12 @@
   
   .container-slim {
     @apply max-w-4xl mx-auto;
+  }
+  
+  .global-background {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 
   .animate-glow {

@@ -19,6 +19,11 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
+        <img 
+          src="/lovable-uploads/f6986b22-af30-49c2-9296-ddc2cab41aa1.png"
+          alt="Scenic background"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </motion.div>
 
@@ -31,7 +36,7 @@ export default function Hero() {
         >
           <div className="absolute inset-0 animate-glow rounded-full" />
           <img 
-            src="/lovable-uploads/5fee8ed9-3406-46a8-b28a-13908b98bae8.png" 
+            src="/lovable-uploads/d4b4a350-dd6d-406a-a7d5-e36626121c32.png" 
             alt="Aryaansh Soni" 
             className="w-full h-full object-cover rounded-full"
           />
