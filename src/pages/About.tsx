@@ -18,7 +18,7 @@ const About = () => {
           <div className="sticky top-24">
             <div className="relative rounded-xl overflow-hidden mb-6 neon-border">
               <img
-                src="/lovable-uploads/4448e0e7-e1da-41b3-add9-17dcec9d9015.png"
+                src="/lovable-uploads/3b0abfe7-7dca-4f42-acfb-f4ead489da65.png"
                 alt="Aryaansh Soni"
                 className="w-full h-auto"
                 loading="lazy"
@@ -104,6 +104,36 @@ const About = () => {
                 <h3 className="font-semibold">Ethics in the Age of Generative AI</h3>
                 <p className="text-sm text-foreground/70">Issued Jan 2025</p>
               </div>
+            </div>
+            
+            <div className="glass p-4 rounded-xl flex items-center gap-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" alt="IBM" className="w-10 h-10 object-contain bg-white p-1 rounded" loading="lazy" />
+              <div>
+                <h3 className="font-semibold">AI Foundations</h3>
+                <p className="text-sm text-foreground/70">Issued Jan 2024</p>
+              </div>
+            </div>
+            
+            <div className="glass p-4 rounded-xl flex items-center gap-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" alt="IBM" className="w-10 h-10 object-contain bg-white p-1 rounded" loading="lazy" />
+              <div>
+                <h3 className="font-semibold">Cybersecurity Fundamentals</h3>
+                <p className="text-sm text-foreground/70">Issued Jan 2024</p>
+              </div>
+            </div>
+            
+            <div className="mt-4 text-center">
+              <a 
+                href="https://www.linkedin.com/in/aryaansh-soni-864794217/details/certifications/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
+              >
+                View all certificates
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
           </div>
         </motion.div>

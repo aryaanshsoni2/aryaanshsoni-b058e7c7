@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,12 +18,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <img 
-          src="/lovable-uploads/2c1ae677-ddc1-4a42-b9e7-5d197c7ceb59.png"
-          alt="Scenic sunset landscape"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" /> {/* Darkened overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </motion.div>
 
       <div className="text-center max-w-4xl px-4 space-y-8 relative z-10">
@@ -36,7 +30,7 @@ export default function Hero() {
         >
           <div className="absolute inset-0 animate-glow rounded-full" />
           <img 
-            src="/lovable-uploads/3b60924f-dd5c-45a4-9060-68caa7700a9d.png" 
+            src="/lovable-uploads/04f12612-72fd-43b6-a86e-d3649eba81e5.png" 
             alt="Aryaansh Soni" 
             className="w-full h-full object-cover rounded-full"
           />
@@ -57,10 +51,10 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-          <p className="text-xl md:text-2xl text-foreground/80 text-white font-semibold">
+          <p className="text-xl md:text-2xl text-foreground/80">
             Creative Developer & AI Enthusiast
           </p>
-          <p className="text-md md:text-lg text-white max-w-2xl mx-auto bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+          <p className="text-md md:text-lg text-foreground/60 max-w-2xl mx-auto">
             I am a dedicated and collaborative individual with a strong interest in 
             technology, artificial intelligence, and creative design.
           </p>
@@ -80,7 +74,7 @@ export default function Hero() {
           </Button>
           <Button
             variant="outline"
-            className="rounded-full px-6 border-primary/20 hover:bg-primary/5 bg-white/10 backdrop-blur-sm text-white"
+            className="rounded-full px-6 border-primary/20 hover:bg-primary/5"
             onClick={() => scrollToSection('contact')}
           >
             Contact Me
@@ -93,7 +87,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
         >
-          <ChevronDown className="w-8 h-8 text-white" />
+          <ChevronDown className="w-8 h-8 text-foreground/50" />
         </motion.div>
       </div>
     </div>

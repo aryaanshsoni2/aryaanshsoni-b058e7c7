@@ -50,7 +50,7 @@ const Index = () => {
       
       <PageContainer className="py-16">
         <motion.h2 
-          className="text-3xl font-bold font-cyber text-center mb-12 text-white text-shadow"
+          className="text-3xl font-bold font-cyber text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -62,7 +62,7 @@ const Index = () => {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="content-card text-white"
+              className="glass p-6 rounded-xl transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -72,10 +72,10 @@ const Index = () => {
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2 font-cyber">{feature.title}</h3>
-              <p className="mb-4">{feature.description}</p>
+              <p className="text-foreground/80 mb-4">{feature.description}</p>
               <Button 
                 variant="outline" 
-                className="rounded-md bg-white/10 hover:bg-white/20 border border-white/30 text-white"
+                className="rounded-md"
                 onClick={() => scrollToSection(feature.sectionId)}
               >
                 Explore {feature.title}
