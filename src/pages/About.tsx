@@ -18,7 +18,7 @@ const About = () => {
           <div className="sticky top-24">
             <div className="relative rounded-xl overflow-hidden mb-6 neon-border">
               <img
-                src="/lovable-uploads/4c3298de-0763-4fc2-81f1-1af7c03d3bce.png"
+                src="/lovable-uploads/3b0abfe7-7dca-4f42-acfb-f4ead489da65.png"
                 alt="Aryaansh Soni"
                 className="w-full h-auto"
                 loading="lazy"
@@ -91,22 +91,6 @@ const About = () => {
           
           <div className="space-y-4">
             <div className="glass p-4 rounded-xl flex items-center gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" alt="IBM" className="w-10 h-10 object-contain bg-white p-1 rounded" loading="lazy" />
-              <div>
-                <h3 className="font-semibold">AI Foundations</h3>
-                <p className="text-sm text-foreground/70">Issued Jan 2024</p>
-              </div>
-            </div>
-            
-            <div className="glass p-4 rounded-xl flex items-center gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" alt="IBM" className="w-10 h-10 object-contain bg-white p-1 rounded" loading="lazy" />
-              <div>
-                <h3 className="font-semibold">Cybersecurity Fundamentals</h3>
-                <p className="text-sm text-foreground/70">Issued Jan 2024</p>
-              </div>
-            </div>
-            
-            <div className="glass p-4 rounded-xl flex items-center gap-4">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png" alt="Microsoft" className="w-10 h-10 object-contain" loading="lazy" />
               <div>
                 <h3 className="font-semibold">Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
@@ -119,6 +103,22 @@ const About = () => {
               <div>
                 <h3 className="font-semibold">Ethics in the Age of Generative AI</h3>
                 <p className="text-sm text-foreground/70">Issued Jan 2025</p>
+              </div>
+            </div>
+            
+            <div className="glass p-4 rounded-xl flex items-center gap-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" alt="IBM" className="w-10 h-10 object-contain bg-white p-1 rounded" loading="lazy" />
+              <div>
+                <h3 className="font-semibold">AI Foundations</h3>
+                <p className="text-sm text-foreground/70">Issued Jan 2024</p>
+              </div>
+            </div>
+            
+            <div className="glass p-4 rounded-xl flex items-center gap-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" alt="IBM" className="w-10 h-10 object-contain bg-white p-1 rounded" loading="lazy" />
+              <div>
+                <h3 className="font-semibold">Cybersecurity Fundamentals</h3>
+                <p className="text-sm text-foreground/70">Issued Jan 2024</p>
               </div>
             </div>
             

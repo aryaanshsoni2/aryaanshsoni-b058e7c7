@@ -43,7 +43,7 @@ export default function Layout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen global-background">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <ThemeToggle />
       <main className="flex-grow">

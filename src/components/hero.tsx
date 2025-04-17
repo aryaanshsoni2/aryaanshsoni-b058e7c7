@@ -36,7 +36,7 @@ export default function Hero() {
         >
           <div className="absolute inset-0 animate-glow rounded-full" />
           <img 
-            src="/lovable-uploads/d4b4a350-dd6d-406a-a7d5-e36626121c32.png" 
+            src="/lovable-uploads/04f12612-72fd-43b6-a86e-d3649eba81e5.png" 
             alt="Aryaansh Soni" 
             className="w-full h-full object-cover rounded-full"
           />

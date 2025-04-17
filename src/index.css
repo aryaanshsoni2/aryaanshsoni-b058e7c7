@@ -57,8 +57,6 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    background-attachment: fixed;
     min-height: 100vh;
   }
 }
@@ -90,12 +88,6 @@
   
   .container-slim {
     @apply max-w-4xl mx-auto;
-  }
-  
-  .global-background {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
   }
 
   .animate-glow {
