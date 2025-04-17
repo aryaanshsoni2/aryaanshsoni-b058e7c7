@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -20,11 +21,11 @@ export default function Hero() {
         transition={{ duration: 1 }}
       >
         <img 
-          src="/lovable-uploads/f6986b22-af30-49c2-9296-ddc2cab41aa1.png"
+          src="/lovable-uploads/93aebe5a-5361-45de-9254-c5f35a7c4ad4.png"
           alt="Scenic background"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/40" />
       </motion.div>
 
       <div className="text-center max-w-4xl px-4 space-y-8 relative z-10">
@@ -36,7 +37,7 @@ export default function Hero() {
         >
           <div className="absolute inset-0 animate-glow rounded-full" />
           <img 
-            src="/lovable-uploads/04f12612-72fd-43b6-a86e-d3649eba81e5.png" 
+            src="/lovable-uploads/3b60924f-dd5c-45a4-9060-68caa7700a9d.png" 
             alt="Aryaansh Soni" 
             className="w-full h-full object-cover rounded-full"
           />
