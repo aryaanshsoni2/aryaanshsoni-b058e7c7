@@ -46,11 +46,11 @@ export default function Layout({ children }: LayoutProps) {
     <div className="flex flex-col min-h-screen relative">
       <div className="fixed inset-0 -z-10">
         <img 
-          src="/lovable-uploads/2c1ae677-ddc1-4a42-b9e7-5d197c7ceb59.png" 
-          alt="Background" 
+          src="/lovable-uploads/e9c33909-cad3-4de0-b548-ed253a1180a2.png" 
+          alt="Sunset landscape with cherry blossom tree" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" /> {/* Global overlay for better contrast */}
+        <div className="absolute inset-0 bg-black/40" /> {/* Darker overlay for better text contrast */}
       </div>
       <Navbar />
       <ThemeToggle />
@@ -61,3 +61,4 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   );
 }
+
