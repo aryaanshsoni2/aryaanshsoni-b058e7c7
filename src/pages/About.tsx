@@ -3,6 +3,7 @@ import PageContainer from "@/components/page-container";
 import { Badge } from "@/components/ui/badge";
 import { Award, Briefcase, GraduationCap, Calendar, MapPin } from "lucide-react";
 import ExperienceTimeline from "@/components/experience-timeline";
+
 const About = () => {
   return <PageContainer>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -104,9 +105,27 @@ const About = () => {
                 <p className="text-sm text-foreground/70">Issued Jan 2025</p>
               </div>
             </div>
+
+            <div className="glass p-4 rounded-xl flex items-center gap-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" className="w-10 h-10 object-contain" loading="lazy" />
+              <div>
+                <h3 className="font-semibold">Cybersecurity & AI fundamentals</h3>
+                <p className="text-sm text-foreground/70">Issued Jan 2024</p>
+              </div>
+            </div>
+
+            <a 
+              href="https://www.linkedin.com/in/aryaansh-soni-864794217/details/certifications/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="block text-center text-primary hover:text-primary/80 underline underline-offset-4 mt-6"
+            >
+              View all licenses & certifications
+            </a>
           </div>
         </motion.div>
       </div>
     </PageContainer>;
 };
+
 export default About;
