@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,21 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="min-h-[90vh] flex flex-col items-center justify-center relative overflow-hidden">
-      <motion.div
-        className="absolute inset-0 -z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <img 
-          src="/lovable-uploads/2c1ae677-ddc1-4a42-b9e7-5d197c7ceb59.png"
-          alt="Scenic sunset landscape"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" /> {/* Darkened overlay for better text readability */}
-      </motion.div>
-
+    <div className="min-h-[90vh] flex flex-col items-center justify-center relative">
       <div className="text-center max-w-4xl px-4 space-y-8 relative z-10">
         <motion.div
           className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/10 mx-auto relative"
