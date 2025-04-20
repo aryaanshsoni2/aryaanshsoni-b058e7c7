@@ -1,28 +1,23 @@
-
 import { motion } from "framer-motion";
 import PageContainer from "@/components/page-container";
 import { Badge } from "@/components/ui/badge";
 import { Award, Briefcase, GraduationCap, Calendar, MapPin } from "lucide-react";
 import ExperienceTimeline from "@/components/experience-timeline";
-
 const About = () => {
-  return (
-    <PageContainer>
+  return <PageContainer>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <motion.div
-          className="lg:col-span-1"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <motion.div className="lg:col-span-1" initial={{
+        opacity: 0,
+        x: -20
+      }} animate={{
+        opacity: 1,
+        x: 0
+      }} transition={{
+        duration: 0.5
+      }}>
           <div className="sticky top-24">
             <div className="relative rounded-xl overflow-hidden mb-6 neon-border">
-              <img
-                src="/lovable-uploads/4448e0e7-e1da-41b3-add9-17dcec9d9015.png"
-                alt="Aryaansh Soni"
-                className="w-full h-auto"
-                loading="lazy"
-              />
+              
             </div>
             
             <h2 className="text-2xl font-bold font-cyber mb-2">Aryaansh Soni</h2>
@@ -56,12 +51,16 @@ const About = () => {
           </div>
         </motion.div>
         
-        <motion.div
-          className="lg:col-span-2"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <motion.div className="lg:col-span-2" initial={{
+        opacity: 0,
+        x: 20
+      }} animate={{
+        opacity: 1,
+        x: 0
+      }} transition={{
+        duration: 0.5,
+        delay: 0.2
+      }}>
           <h1 className="text-3xl font-bold font-cyber mb-6">About Me</h1>
           
           <div className="space-y-6 text-foreground/80">
@@ -108,8 +107,6 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-    </PageContainer>
-  );
+    </PageContainer>;
 };
-
 export default About;
