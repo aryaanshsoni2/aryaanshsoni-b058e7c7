@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import PageContainer from "@/components/page-container";
 import { Badge } from "@/components/ui/badge";
@@ -118,7 +119,7 @@ const About = () => {
               href="https://www.linkedin.com/in/aryaansh-soni-864794217/details/certifications/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="block text-center text-primary hover:text-primary/80 underline underline-offset-4 mt-6"
+              className="block text-center text-white bg-primary/20 hover:bg-primary/30 py-3 rounded-lg transition-colors duration-300 font-semibold tracking-wider uppercase text-sm"
             >
               View all licenses & certifications
             </a>
