@@ -55,7 +55,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -73,6 +73,10 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary;
   }
   
+  .content-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6;
+  }
+  
   .will-change-transform {
     will-change: transform;
   }
@@ -81,37 +85,31 @@
     will-change: opacity;
   }
   
-  /* Performance optimization */
   .transform-gpu {
     transform: translateZ(0);
   }
   
-  /* Add container class with max-width and more specific margins */
   .container-slim {
     @apply max-w-4xl mx-auto;
   }
 }
 
-/* Font optimization for smoother animations */
 @font-face {
   font-family: 'Inter';
   font-display: swap;
 }
 
-/* Optimize image rendering */
 img {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
 }
 
-/* Optimize scrolling */
 html, body {
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
 }
 
-/* Enable hardware acceleration */
 .is-scrolling .transform-gpu,
 .is-scrolling img,
 .is-scrolling .glass {
@@ -124,4 +122,14 @@ html, body {
 
 .is-scrolling * {
   cursor: grabbing !important;
+}
+
+/* Enhanced text readability */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Content areas with improved readability */
+.content-area {
+  @apply bg-black/30 backdrop-blur-sm rounded-lg p-4 text-white shadow-md;
 }

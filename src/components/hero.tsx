@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -21,11 +20,11 @@ export default function Hero() {
         transition={{ duration: 1 }}
       >
         <img 
-          src="/lovable-uploads/93aebe5a-5361-45de-9254-c5f35a7c4ad4.png"
-          alt="Scenic background"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          src="/lovable-uploads/2c1ae677-ddc1-4a42-b9e7-5d197c7ceb59.png"
+          alt="Scenic sunset landscape"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-black/40" /> {/* Darkened overlay for better text readability */}
       </motion.div>
 
       <div className="text-center max-w-4xl px-4 space-y-8 relative z-10">
@@ -58,10 +57,10 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-          <p className="text-xl md:text-2xl text-foreground/80">
+          <p className="text-xl md:text-2xl text-foreground/80 text-white font-semibold">
             Creative Developer & AI Enthusiast
           </p>
-          <p className="text-md md:text-lg text-foreground/60 max-w-2xl mx-auto">
+          <p className="text-md md:text-lg text-white max-w-2xl mx-auto bg-black/20 p-4 rounded-lg backdrop-blur-sm">
             I am a dedicated and collaborative individual with a strong interest in 
             technology, artificial intelligence, and creative design.
           </p>
@@ -81,7 +80,7 @@ export default function Hero() {
           </Button>
           <Button
             variant="outline"
-            className="rounded-full px-6 border-primary/20 hover:bg-primary/5"
+            className="rounded-full px-6 border-primary/20 hover:bg-primary/5 bg-white/10 backdrop-blur-sm text-white"
             onClick={() => scrollToSection('contact')}
           >
             Contact Me
@@ -94,7 +93,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
         >
-          <ChevronDown className="w-8 h-8 text-foreground/50" />
+          <ChevronDown className="w-8 h-8 text-white" />
         </motion.div>
       </div>
     </div>
