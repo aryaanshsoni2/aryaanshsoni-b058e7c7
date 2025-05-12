@@ -43,6 +43,9 @@ export async function sendEmail(data: EmailData) {
       `,
     });
 
+    console.log('Owner email response:', ownerEmailResponse);
+    console.log('User email response:', userEmailResponse);
+
     return { 
       success: true, 
       ownerEmailId: ownerEmailResponse.data?.id,
