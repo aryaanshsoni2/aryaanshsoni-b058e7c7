@@ -24,6 +24,9 @@ export default defineConfig(({ mode }) => ({
     // This allows Resend to work in the browser environment
     'process.env': {
       RESEND_API_KEY: JSON.stringify('re_fR4Tw8N6_EQmfWKX28KFZep6iJyZV1GpQ')
-    }
+    },
+    // Also define global.process for Resend compatibility
+    'global.process.env.RESEND_API_KEY': JSON.stringify('re_fR4Tw8N6_EQmfWKX28KFZep6iJyZV1GpQ'),
+    'global': {}
   }
 }));
