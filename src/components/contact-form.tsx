@@ -20,7 +20,7 @@ export default function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<EmailData>({
     name: "",
     email: "",
     message: "",
@@ -28,16 +28,28 @@ export default function ContactForm() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    console.log(`Field changed: ${name} = ${value}`);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("Form submitted with data:", formData);
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Missing information",
+        description: "Please fill out all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
       console.log("Sending email with data:", formData);
-      const result = await sendEmail(formData as EmailData);
+      const result = await sendEmail(formData);
       console.log("Email send result:", result);
       
       if (result.success) {
@@ -62,6 +74,8 @@ export default function ContactForm() {
     }
   };
 
+  console.log("Current form state:", formData);
+
   return (
     <motion.div
       className="glass p-8 rounded-xl neon-border w-full max-w-md mx-auto"
@@ -73,8 +87,9 @@ export default function ContactForm() {
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="text-sm font-medium mb-1 block">Name</label>
+          <label htmlFor="name" className="text-sm font-medium mb-1 block">Name</label>
           <Input
+            id="name"
             name="name"
             placeholder="Your Name"
             value={formData.name}
@@ -86,8 +101,9 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="text-sm font-medium mb-1 block">Email</label>
+          <label htmlFor="email" className="text-sm font-medium mb-1 block">Email</label>
           <Input
+            id="email"
             name="email"
             type="email"
             placeholder="your.email@example.com"
@@ -100,8 +116,9 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="text-sm font-medium mb-1 block">Message</label>
+          <label htmlFor="message" className="text-sm font-medium mb-1 block">Message</label>
           <Textarea
+            id="message"
             name="message"
             placeholder="How can I help you?"
             value={formData.message}

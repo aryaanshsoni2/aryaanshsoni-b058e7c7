@@ -1,8 +1,9 @@
 
 import { Resend } from 'resend';
 
-// Initialize Resend with API key
-const resend = new Resend('re_fR4Tw8N6_EQmfWKX28KFZep6iJyZV1GpQ');
+// Initialize Resend with API key directly
+const resendApiKey = 're_fR4Tw8N6_EQmfWKX28KFZep6iJyZV1GpQ';
+const resend = new Resend(resendApiKey);
 
 export interface EmailData {
   name: string;
@@ -12,6 +13,9 @@ export interface EmailData {
 
 export async function sendEmail(data: EmailData) {
   const { name, email, message } = data;
+  
+  console.log('Starting email send with data:', { name, email, messageLength: message.length });
+  console.log('Using Resend API key:', resendApiKey);
   
   try {
     // Send email to site owner
@@ -26,6 +30,8 @@ export async function sendEmail(data: EmailData) {
         <p>${message}</p>
       `,
     });
+
+    console.log('Owner email response:', ownerEmailResponse);
 
     // Send confirmation email to user
     const userEmailResponse = await resend.emails.send({
@@ -43,7 +49,6 @@ export async function sendEmail(data: EmailData) {
       `,
     });
 
-    console.log('Owner email response:', ownerEmailResponse);
     console.log('User email response:', userEmailResponse);
 
     return { 
