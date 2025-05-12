@@ -14,6 +14,7 @@ import {
   DialogTitle
 } from "@/components/ui/dialog";
 import { sendEmail, EmailData } from "@/api/send-email";
+import { Loader2 } from "lucide-react";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -35,7 +36,9 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
+      console.log("Sending email with data:", formData);
       const result = await sendEmail(formData as EmailData);
+      console.log("Email send result:", result);
       
       if (result.success) {
         setFormData({ name: "", email: "", message: "" });
@@ -78,6 +81,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="bg-background/50"
+            disabled={isSubmitting}
           />
         </div>
         
@@ -91,6 +95,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="bg-background/50"
+            disabled={isSubmitting}
           />
         </div>
         
@@ -103,6 +108,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="resize-none h-32 bg-background/50"
+            disabled={isSubmitting}
           />
         </div>
         
@@ -111,7 +117,14 @@ export default function ContactForm() {
           className="w-full rounded-md bg-primary hover:bg-primary/90" 
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Sending..." : "Send Message"}
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Sending...
+            </>
+          ) : (
+            "Send Message"
+          )}
         </Button>
       </form>
 

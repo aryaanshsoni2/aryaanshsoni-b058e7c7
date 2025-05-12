@@ -2,7 +2,7 @@
 import { Resend } from 'resend';
 
 // Initialize Resend with API key
-const resend = new Resend(process.env.RESEND_API_KEY || 're_fR4Tw8N6_EQmfWKX28KFZep6iJyZV1GpQ');
+const resend = new Resend('re_fR4Tw8N6_EQmfWKX28KFZep6iJyZV1GpQ');
 
 export interface EmailData {
   name: string;
@@ -45,8 +45,8 @@ export async function sendEmail(data: EmailData) {
 
     return { 
       success: true, 
-      ownerEmailId: ownerEmailResponse.id,
-      userEmailId: userEmailResponse.id
+      ownerEmailId: ownerEmailResponse.data?.id,
+      userEmailId: userEmailResponse.data?.id
     };
   } catch (error) {
     console.error('Error sending email:', error);
